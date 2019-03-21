@@ -3,7 +3,7 @@ spring:
     name: gateway
   cloud:
     config:
-      uri: http://${CONFIG_HOST}:${CONFIG_PORT}
+      uri: http://localhost:8888
       fail-fast: true
-      password: ${CONFIG_PASS}
+      password: root
       username: user

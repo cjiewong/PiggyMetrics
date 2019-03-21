@@ -2,24 +2,24 @@ security:
   oauth2:
     client:
       clientId: statistics-service
-      clientSecret: ${STATISTICS_SERVICE_PASSWORD}
-      accessTokenUri: http://${AUTH_HOST}:${AUTH_PORT}/uaa/oauth/token
+      clientSecret: root
+      accessTokenUri: http://localhost:7777/uaa/oauth/token
       grant-type: client_credentials
       scope: server
 
 spring:
   data:
     mongodb:
-      host: ${MONGO_HOST}
-      username: ${MONGO_INITDB_ROOT_USERNAME}
-      password: ${MONGO_INITDB_ROOT_PASSWORD}
+      host: localhost
+      username: root
+      password: root
       database: admin
-      port: ${MONGO_PORT}
+      port: 27017
 
 server:
   servlet:
     context-path: /statistics
-  port: ${PORT}
+  port: 7003
 
 rates:
   url: https://exchangeratesapi.io/api
