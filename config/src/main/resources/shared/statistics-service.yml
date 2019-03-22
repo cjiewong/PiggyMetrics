@@ -22,4 +22,4 @@ server:
   port: 7003
 
 rates:
-  url: https://exchangeratesapi.io/api
+  url: https://api.exchangeratesapi.io
