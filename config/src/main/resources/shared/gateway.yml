@@ -9,6 +9,22 @@ hystrix:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
+auth-service:
+  ribbon:
+    ReadTimeout: 5000
+    ConnectTimeout: 5000
+account-service:
+  ribbon:
+    ReadTimeout: 5000
+    ConnectTimeout: 5000
+statistics-service:
+  ribbon:
+    ReadTimeout: 5000
+    ConnectTimeout: 5000
+notification-service:
+  ribbon:
+    ReadTimeout: 5000
+    ConnectTimeout: 5000
 
 zuul:
   ignoredServices: '*'
@@ -19,7 +35,8 @@ zuul:
   routes:
     auth-service:
         path: /uaa/**
-        url: http://localhost:7777
+#        url: http://localhost:7777
+        serviceId: auth-service
         stripPrefix: false
         sensitiveHeaders:
 
